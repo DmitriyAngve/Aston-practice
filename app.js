@@ -1,11 +1,11 @@
-function speak(words) {
-  return words;
-}
+// function speak(words) {
+//   return words;
+// }
 
-console.log(speak("Hello World"));
+// console.log(speak("Hello World"));
 
-function barking(voof) {
-  return voof;
-}
+// function barking(voof) {
+//   return voof;
+// }
 
-console.log(barking("voof voof"));
+// console.log(barking("voof voof"));
