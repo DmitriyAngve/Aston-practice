@@ -259,3 +259,9 @@ function reverseStr4(str) {
     .join("");
 }
 console.log(reverseStr4("aston"));
+
+function array(n) {
+  return Array.from({ length: n + 1 }, (_, index) => index);
+}
+
+console.log(array(10));
