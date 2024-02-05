@@ -145,14 +145,14 @@ class Stack {
   }
 }
 const stack = new Stack();
-stack.push(1);
+stack.push(1); // добавляю в стек
 stack.push(2);
-console.log(stack.peek());
-console.log(stack.pop());
-console.log(stack.size());
-console.log(stack.isEmpty());
-stack.clear();
-console.log(stack.isEmpty());
+console.log(stack.peek()); // возвращаю последнего добавленного
+console.log(stack.pop()); // удаляю и возвращаю последнего
+console.log(stack.size()); // размер стека
+console.log(stack.isEmpty()); // стек пустой? false
+stack.clear(); // очищаю стек
+console.log(stack.isEmpty()); // стек пустой? true
 
 // 3.3 Queue (очередь):
 
