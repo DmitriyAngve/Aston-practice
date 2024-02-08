@@ -117,6 +117,31 @@ let total = 13;
 //result = [4, 9]
 
 const firstSum = (arr, total) => {
+  // Я воспользуюсь двумя указателями
+  let left = 0; // указатель на начало
+  let right = arr.length - 1; // указатель на конец
+
+  while (left < right) {
+    // Два указателя перебирают массив навстречу. left увеличивается, если сумма двух чисел меньше total или right уменьшается если сумма больше total
+    const sum = arr[left] + arr[right]; // сама сумма
+    if (sum === total) {
+      return [arr[left], arr[right]]; // если сумма равна total - пара найдена
+    } else if (sum < total) {
+      left++; // перемещаю левый указатель, чтобы увеличить сумму
+    } else {
+      right--; // перемещаю правый указатель, чтобы уменьшить сумму
+    }
+  }
+
+  return "Not found"; // пара чисел не найдена
+};
+
+console.log(firstSum(arr, total));
+
+// Сложность будет O(n log n).
+
+/*
+const firstSum = (arr, total) => {
   // Я использую хэш таблицу
   const ht = {};
   for (let i = 0; i < arr.length; i++) {
@@ -139,4 +164,5 @@ const firstSum = (arr, total) => {
   return "Not found";
 };
 
-console.log(firstSum(arr, total));
+// Сложность будет O(n) - два цикла по массиву
+*/
